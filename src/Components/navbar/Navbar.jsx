@@ -1,6 +1,8 @@
 import React from 'react'
 import "./navbar.css"
 
+const logo=require('../../Assets/Images/profile.jpg')
+
 const Navbar = () => {
   return (
     
@@ -22,7 +24,7 @@ const Navbar = () => {
             </ul>
         </div>
         <div className='topRight'>
-            <img className='topImg'  src="https://w0.peakpx.com/wallpaper/600/322/HD-wallpaper-anime-boy-anime-boy-anime-boys-cute-cute-anime-boy-cute-anime-boys-lonely-sad-anime-boy-sad-anime-boys-thumbnail.jpg" alt="profile-icon" />
+            <img className='topImg'  src={logo} />
 
             <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
