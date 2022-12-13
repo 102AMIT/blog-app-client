@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./navbar.css"
 
 const logo=require('../../Assets/Images/profile.jpg')
 
 const Navbar = () => {
+  const user=false;
   return (
     
     <div className='navbar'>
@@ -17,15 +19,39 @@ const Navbar = () => {
         </div>
         <div className='topCenter'>
             <ul className="topList">
-                <li className="topListItem">HOME</li>
-                <li className="topListItem">ABOUT</li>
-                <li className="topListItem">CONTACT</li>
-                <li className="topListItem">WRITE</li>
-                <li className="topListItem">LOGOUT</li>
+                <li className="topListItem">
+                  <Link className="link" to="/">HOME</Link>
+                </li>
+                <li className="topListItem">
+                <Link className="link" to="/">ABOUT</Link>
+
+                </li>
+                <li className="topListItem">
+                <Link className="link" to="/">CONTACT</Link>
+                </li>
+                <li className="topListItem">
+                <Link className="link" to="/">WRITE</Link>
+                </li>
+                <li className="topListItem">
+                {user && "LOGOUT"}
+                </li>
             </ul>
         </div>
         <div className='topRight'>
-            <img className='topImg'  src={logo} />
+          {
+              user ? (<img className='topImg'  src={logo} />) : 
+              ( 
+                <ul className='topList'>
+                  <li className='topListItem'>
+                      <Link className="link" to="/login">LOGIN</Link>
+                  </li>
+                  <li className='topListItem'>
+                      <Link className="link" to="/register">REGISTER</Link>
+                  </li>
+                </ul>
+              )
+          }
+            
 
             <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
         </div>
