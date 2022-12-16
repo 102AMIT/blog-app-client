@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./navbar.css"
-
+import { useContext } from "react";
+import { Context } from "../context/Context";
 const logo=require('../../Assets/Images/profile.jpg')
 
 const Navbar = () => {
-  const user=false;
+  const {user}=useContext(Context);
   return (
     
     <div className='navbar'>

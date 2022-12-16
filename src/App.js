@@ -6,9 +6,11 @@ import Settings from "./Components/pages/settings/Settings";
 import Login from "./Components/pages/login/Login";
 import Register from "./Components/pages/register/Register";
 import { BrowserRouter as Router,Route,Link,Routes } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./Components/context/Context";
 
 function App() {
-  const user=false;
+  const {user}=useContext(Context);
   return (
     <Router>
         <Navbar />
