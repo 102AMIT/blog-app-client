@@ -36,7 +36,7 @@ const Sidebar = () => {
         </ul>
         </div>
         <div className="sidebarItem">
-        <span className="sidebarTitle">FOLLOW US</span>
+        <span className="sidebarTitle">FOLLOW ME</span>
         <div className="sidebarSocial">
 
             <a href="https://github.com/102AMIT"><i className="sidebarIcon fa-brands fa-square-github"></i></a>

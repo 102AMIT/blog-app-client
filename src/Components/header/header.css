@@ -11,13 +11,16 @@
 }
 .headerTitleSm{
     position: absolute;
-    top:18%;
+    top:10%;
     font-size: 20px;
+    color: blueviolet;
+    border-bottom: 2px solid blueviolet;
 }
 .headerTitleLg{
     position: absolute;
-    top: 20%;
-    font-size: 100px;
+    top: 14%;
+    font-size: 30px;
+    color: rgb(85, 30, 91);
 }
 .headerImg{
     width: 100%;
