@@ -6,8 +6,8 @@ const Posts = ({posts}) => {
   return (
     
     <div className='posts'>
-      {posts.map(p=>{
-       return <Post post={p}/>
+      {posts.map(post=>{
+        return <Post post={post}/>
       })}
     </div>
   )

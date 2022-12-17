@@ -2,17 +2,17 @@ import {Link} from 'react-router-dom'
 import './post.css';
 
 const Post = ({post}) => {
-  console.log(post,"single")
+  const PF="http://localhost:8000/images/";
   return (
     <div className='post'>
-        {post.photo && (
-        <img className='postImg' src={post.photo} alt="-post-image" />
-        )}
+        {post.photo && 
+        <img className='postImg' src={PF + post.photo} alt="-post-image" />
+        }
     <div className="postInfo">
       <div className="postCats">
         
         {post.categories.map((c)=>{
-          <span className="postCat">{c.name}</span>
+          return <span className="postCat">{c.name}</span>
         })}
 
       </div>

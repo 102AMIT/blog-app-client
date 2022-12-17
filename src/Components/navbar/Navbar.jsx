@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import { Link } from 'react-router-dom'
 import "./navbar.css"
-import { useContext } from "react";
 import { Context } from "../context/Context";
-const logo=require('../../Assets/Images/profile.jpg')
+
 
 const Navbar = () => {
-  const {user}=useContext(Context);
+  const {user,dispatch}=useContext(Context);
+
+  const handleLogout=()=>{
+    dispatch({type:"LOGOUT"});
+  }
   return (
     
     <div className='navbar'>
@@ -24,23 +27,23 @@ const Navbar = () => {
                   <Link className="link" to="/">HOME</Link>
                 </li>
                 <li className="topListItem">
-                <Link className="link" to="/">ABOUT</Link>
+                <Link className="link" to="/about">ABOUT</Link>
 
                 </li>
                 <li className="topListItem">
-                <Link className="link" to="/">CONTACT</Link>
+                <Link className="link" to="/contact">CONTACT</Link>
                 </li>
                 <li className="topListItem">
-                <Link className="link" to="/">WRITE</Link>
+                <Link className="link" to="/write">WRITE</Link>
                 </li>
-                <li className="topListItem">
+                <li className="topListItem" onClick={handleLogout}>
                 {user && "LOGOUT"}
                 </li>
             </ul>
         </div>
         <div className='topRight'>
           {
-              user ? (<img className='topImg'  src={logo} />) : 
+              user ? (<img className='topImg'  src={user.profilePic} />) : 
               ( 
                 <ul className='topList'>
                   <li className='topListItem'>
