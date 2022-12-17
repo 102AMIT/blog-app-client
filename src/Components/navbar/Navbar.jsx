@@ -6,6 +6,8 @@ import { Context } from "../context/Context";
 
 const Navbar = () => {
   const {user,dispatch}=useContext(Context);
+  const PF="http://localhost:8000/images/";
+
 
   const handleLogout=()=>{
     dispatch({type:"LOGOUT"});
@@ -15,9 +17,13 @@ const Navbar = () => {
     <div className='navbar'>
         <div className='topLeft'>
         <div className="topLeftStyle">
-        <i className="topIcon fa-brands fa-square-github"></i>
-        <i className="topIcon fa-brands fa-linkedin"></i>
-        <i className="topIcon fa-brands fa-spotify"></i>
+        
+        <a href="https://github.com/102AMIT"><i className="topIcon fa-brands fa-square-github"></i></a>
+
+        <a href="https://www.linkedin.com/in/amit-thakur-ab7685128/"><i className="topIcon fa-brands fa-linkedin"></i></a>
+        
+        <a href="https://open.spotify.com/"><i className="topIcon fa-brands fa-spotify"></i></a>
+
         </div>
         
         </div>
@@ -27,11 +33,11 @@ const Navbar = () => {
                   <Link className="link" to="/">HOME</Link>
                 </li>
                 <li className="topListItem">
-                <Link className="link" to="/about">ABOUT</Link>
+                <Link className="link" to="/">ABOUT</Link>
 
                 </li>
                 <li className="topListItem">
-                <Link className="link" to="/contact">CONTACT</Link>
+                <Link className="link" to="/">CONTACT</Link>
                 </li>
                 <li className="topListItem">
                 <Link className="link" to="/write">WRITE</Link>
@@ -42,9 +48,13 @@ const Navbar = () => {
             </ul>
         </div>
         <div className='topRight'>
+
           {
-              user ? (<img className='topImg'  src={user.profilePic} />) : 
-              ( 
+              user ? (
+                <Link to="/settings">
+                <img className='topImg'  src={PF+user.profilePic} />
+                </Link>
+                ) : ( 
                 <ul className='topList'>
                   <li className='topListItem'>
                       <Link className="link" to="/login">LOGIN</Link>

@@ -17,11 +17,7 @@
     color: lightcoral;
 }
 
-.settingsDeleteTitle{
-    color: red;
-    font-size: 12px;
-    cursor: pointer;
-}
+
 
 .settingsForm{
     display: flex;

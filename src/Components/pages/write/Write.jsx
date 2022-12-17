@@ -33,7 +33,6 @@ const Write = () => {
       }
     }
     try{
-      console.log("hello");
       const res=await axios.post("http://localhost:8000/api/posts/",newPost);
       window.location.replace("/post/"+res.data._id);
 

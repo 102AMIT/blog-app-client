@@ -38,9 +38,13 @@ const Sidebar = () => {
         <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
-            <i className="sidebarIcon fa-brands fa-square-github"></i>
-            <i className="sidebarIcon fa-brands fa-linkedin"></i>
-            <i className="sidebarIcon fa-brands fa-spotify"></i>
+
+            <a href="https://github.com/102AMIT"><i className="sidebarIcon fa-brands fa-square-github"></i></a>
+            
+            <a href="https://www.linkedin.com/in/amit-thakur-ab7685128/"><i className="sidebarIcon fa-brands fa-linkedin"></i></a>
+            
+            <a href="https://open.spotify.com/"><i className="sidebarIcon fa-brands fa-spotify"></i></a>
+            
         </div>
         </div>
     </div>
