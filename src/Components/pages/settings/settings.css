@@ -29,13 +29,16 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    
+
 }
 
 .settingsPP > img{
     width: 150px;
     height: 150px;
     border-radius:20%;
-    object-fit: cover;
+    
+    
 }
 
 .settingsPPIcon{

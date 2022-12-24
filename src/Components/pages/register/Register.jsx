@@ -26,15 +26,15 @@ const Register = () => {
             <span className="registerTitle">Register</span>
         <form className='registerForm' onSubmit={handleSubmit}>
             <label>Username</label>
-            <input type="text" className='registerInput' placeholder='Enter Your username..'
+            <input type="text" className='registerInput' placeholder='Enter Your username..' required
             onChange={e=>setUsername(e.target.value)}
              />
             <label>Email</label>
-            <input type="text" className='registerInput' placeholder='Enter Your Email..' 
+            <input type="text" className='registerInput' placeholder='Enter Your Email..' required
             onChange={e=>setEmail(e.target.value)}
             />
             <label>Password</label>
-            <input type="password" className='registerInput' placeholder='Enter Your Password..'
+            <input type="password" className='registerInput' placeholder='Enter Your Password..' required
             onChange={e=>setPassword(e.target.value)}
             
              />
