@@ -5,13 +5,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #A770EF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FDB99B, #CF8BF3, #A770EF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 main{
-    background-color: white;
     height: 30rem;
     width: 70%;
     padding: 3rem;
     border-radius: 0 200px 200px 0;
+    background: #f4c4f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc67fa, #f4c4f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 form{
     margin: 5rem;

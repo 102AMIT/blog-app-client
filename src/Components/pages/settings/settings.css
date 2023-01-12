@@ -1,5 +1,6 @@
 .settings{
     display: flex;
+    
 }
 .settingsWrapper{
     flex:9;
@@ -29,6 +30,7 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5%;
     
 
 }

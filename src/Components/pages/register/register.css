@@ -4,18 +4,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)
-    ),
-     url("https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background:
+     url("https://images.unsplash.com/photo-1493166228553-4fa0fdb916e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
+    opacity: 0.9;
 }
 .registerTitle{
     font-size: 50px;
+    color: #fff;
 }
 .registerForm{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    color:#fff;
 }
 
 .registerForm >label{
@@ -24,8 +26,11 @@
 
 .registerInput{
     padding: 10px;
-    background-color: white;
+    background-color: rgb(223, 221, 221);
     border: none;
+    width: 200px;
+    font-size: 13px;
+    border-radius: 5px;
 }
 
 .registerButton{
@@ -34,8 +39,9 @@
     background-color: teal;
     border: none;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
+    width: 80px;
 }
 
 .registerLoginButton{

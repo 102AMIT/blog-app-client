@@ -26,6 +26,8 @@
     padding: 10px;
     background-color: white;
     border: none;
+    width: 200px;
+    border-radius: 5px;
 }
 
 .loginButton{
@@ -34,8 +36,9 @@
     background-color: lightcoral;
     border: none;
     color: white;
-    border-radius: 10px;
+    border-radius:5px;
     padding: 10px;
+    width: 80px;
 }
 
 .loginButton:disabled{
