@@ -26,14 +26,14 @@ const Write = () => {
       newPost.photo=filename;
 
       try{
-        await axios.post("http://localhost:8000/api/upload",data);
+        await axios.post(`${process.env.REACT_APP_API}api/upload`,data);
 
       }catch(err){
         console.log(err);
       }
     }
     try{
-      const res=await axios.post("http://localhost:8000/api/posts/",newPost);
+      const res=await axios.post(`${process.env.REACT_APP_API}api/posts/`,newPost);
       window.location.replace("/post/"+res.data._id);
 
     }catch(err){

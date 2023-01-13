@@ -6,7 +6,7 @@ import { Context } from "../context/Context";
 
 const Navbar = () => {
   const {user,dispatch}=useContext(Context);
-  const PF="http://localhost:8000/images/";
+  const PF=`${process.env.REACT_APP_API}images/`;
 
 
   const handleLogout=()=>{

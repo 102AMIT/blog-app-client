@@ -12,7 +12,7 @@ const Settings = () => {
   const [password,setPassword]=useState("");
   const [success,setSuccess]=useState("");
   const {user ,dispatch}=useContext(Context);
-  const PF="http://localhost:8000/images/";
+  const PF=`${process.env.REACT_APP_API}images/`;
 
 
   const handleSubmit=async(e)=>{
@@ -32,7 +32,7 @@ const Settings = () => {
       updatedUser.profilePic=filename;
 
       try{
-        await axios.post("http://localhost:8000/api/upload",data);
+        await axios.post(`${process.env.REACT_APP_API}api/upload`,data);
 
       }catch(err){
         console.log(err);
@@ -40,7 +40,7 @@ const Settings = () => {
     }
     try{
       
-      const res=await axios.put("http://localhost:8000/api/user/" + user._id,updatedUser);
+      const res=await axios.put(`${process.env.REACT_APP_API}api/user/` + user._id,updatedUser);
       setSuccess(true)
       dispatch({type:"UPDATE_SUCCESS",payload:res.data})
 

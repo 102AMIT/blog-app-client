@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import './post.css';
 
 const Post = ({post}) => {
-  const PF="http://localhost:8000/images/";
+  const PF=`${process.env.REACT_APP_API}images/`;
   return (
     <div className='post'>
         {post.photo && 
